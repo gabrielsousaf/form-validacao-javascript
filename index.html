@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script src="https://kit.fontawesome.com/5dc0840e04.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./src/img/icon.png">
+    <title>Form Validação </title>
+</head>
+
+<body>
+    <div class="card-login">
+        <h1>LOGIN</h1>
+
+        <form id="form">
+
+            <div class="textfield">
+                <label for="usuario">Usuário:</label>
+                <input type="text" name="usuario" placeholder="Usuário" class="inputs required" oninput="nameValidate()">
+                <span class="span-required">Usuário deve ter no minino 3 caracteres</span>
+            </div>
+
+            <br>
+
+            <div class="textfield">
+                <label for="usuario">Email:</label>
+                <input type="email" name="Email" placeholder="Email" class="inputs required" oninput="emailValidate()">
+                <span class="span-required">Digite um email válido</span>
+
+            </div>
+
+            <br>
+
+            <div class="textfield">
+                <label for="senha">Senha:</label>
+                <input id="input" type="password" name="password" placeholder="Senha" class="inputs required" oninput="mainPasswordValidate()">
+                <i id="visible" class="fas fa-eye-slash" aria-hidden="true"></i>
+                <span class="span-required">Digite uma senha com pelo menos 8 caracteres</span>
+
+                <br>
+            </div>
+
+            <br>
+
+            <div class="textfield">
+                <label for="senha"> Repita sua Senha:</label>
+                <input id="input" type="password" name="password" placeholder="Senha" class="inputs required" oninput="comparePassword()">
+                <span class="span-required">Senhas deve, ser compativeis</span>
+
+                <br>
+            </div>
+
+           
+            <button type="submit" class="btn-login">Enviar</button>
+           
+        </form>
+
+    </div>
+</body>
+
+<script src="./src/js/script.js"></script>
+</html>
